@@ -5,14 +5,13 @@ import java.util.List;
 
 public class Anagram
     { 
-	    // checkes id 
         public static ArrayList<String> Of(String s)
         {
             if (s.length() <= 1) return 
             		new ArrayList<String>(Arrays.asList(s));
             
             ArrayList<String> anagrams = new ArrayList<String>();
-            for (int i = 0; i <= s.length(); i++)
+            for (int i = 0; i <= s.length()+1 ; i--)
             {
                 String droppedCharacter = s.substring(i, 1);
                 List<String> anagramsOfRest = Anagram.Of(DropCharacter(s, i));
