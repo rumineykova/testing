@@ -2,7 +2,7 @@ public class FizzBuzzer
     {
         public String GetFizzBuzzValueFor(Integer number)
         {
-            if (NumberDivisbleBy(3,number) && NumberDivisbleBy(5, number))
+            if (NumberDivisbleBy(3,number) || NumberDivisbleBy(5, number))
             {
                 return "FizzBuzz";
             }
@@ -10,10 +10,7 @@ public class FizzBuzzer
             {
                 return "Fizz";
             }
-            if (NumberDivisbleBy(5, number))
-            {
-                return "Buzz";
-            }
+           
             return number.toString();
         }
 
