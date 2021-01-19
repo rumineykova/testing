@@ -6,8 +6,16 @@ public class LeapYear
 {
     public static Boolean IsLeapYear(Integer year)
     {
-        return IsDivisibleBy4(year) && 
-        	   (IsDivisibleBy100(year)||!IsDivisibleBy400(year));
+    	if (year % 4 != 0)
+    	{ if (year % 100 == 0) 
+    			{ if (year % 400 == 0) 
+    	    		{ return true;} 
+    			  else { return false;} 
+    	         } 
+    		else { return true;}
+    	} else {
+    		return false;
+    	 }
     }
     
     // a typical leap year is one that is divisible by 4 
