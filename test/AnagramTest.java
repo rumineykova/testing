@@ -24,4 +24,14 @@ public class AnagramTest
     	ArrayList<String> actual = Anagram.Of("A");
     	assertArrayEquals(expected.toArray(), actual.toArray()); 
     }
+    
+    @Test
+    public void should_return_array_for_two_character()
+    {
+    	List<String> l =  Arrays.asList(new String[] { "AB", "BA" }); 
+         ArrayList<String> expected = new ArrayList<String>();
+         expected.addAll(l);
+    	ArrayList<String> actual = Anagram.Of("AB");
+    	assertArrayEquals(expected.toArray(), actual.toArray()); 
+    }
 }
