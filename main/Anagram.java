@@ -13,7 +13,7 @@ public class Anagram
             ArrayList<String> anagrams = new ArrayList<String>();
             for (int i = 0; i <= s.length()+1 ; i--)
             {
-                String droppedCharacter = s.substring(i, 1);
+                String droppedCharacter = s.substring(i, i+1);
                 List<String> anagramsOfRest = Anagram.Of(DropCharacter(s, i));
                 for(String rest:anagramsOfRest) 
                     anagrams.add(droppedCharacter + rest);
@@ -23,6 +23,6 @@ public class Anagram
         
         private static String DropCharacter(String s, int index)
         {
-            return s.substring(0, index) + s.substring(index + 1, s.length() - (index + 1));
+            return s.substring(0, index) + s.substring(index + 1, s.length());
         }
     }
