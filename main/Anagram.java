@@ -11,6 +11,7 @@ public class Anagram
             		new ArrayList<String>(Arrays.asList(s));
             
             ArrayList<String> anagrams = new ArrayList<String>();
+            // FIX the loop conditions to prevent IndexOutOfBound exception
             for (int i = 0; i <= s.length()+1 ; i--)
             {
                 String droppedCharacter = s.substring(i, i+1);
